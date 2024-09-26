@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+*/
+
+
+
+
+body {
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Segoe UI';
+  color: aliceblue;
+  /* background-image: url('rainy.jpg'); */
+  background-size: cover;
+  transition: background-image 0.5s ease-in-out;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body > video {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+  z-index: -1;
+}
+
+header {
+  top: -16vh;
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 20vh;
+  width: 100vw;
+  transition: all 0.5s ease-in-out;
+}
+
+header:hover {
+  transform: translateY(16vh);
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: transparent;
+  height: 65vh;
+  gap: 50px;
+
+}
+
+.label_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(32, 32, 32);
+}
+
+.label {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  
+}
+
+footer {
+  bottom: -10vh;
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  width: 100vw;
+  transition: all 0.5s ease-in-out;
+}
+
+footer:hover {
+  transform: translateY(-10vh);
+}

@@ -1,0 +1,43 @@
+/* app/assets/stylesheets/weather.css */
+.select-container {
+  margin: 20px 0; /* Add some margin */
+  display: flex;
+  flex-direction: column; /* Stack label and select vertically */
+  align-items: flex-start; /* Align items to the start */
+}
+
+label {
+  font-size: 16px; /* Font size for the label */
+  margin-bottom: 8px; /* Space between label and select */
+  color: #333; /* Label color */
+}
+
+select {
+  padding: 2% 40px; /* Padding inside the select */
+  font-size: 16px; /* Font size for the select */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #fff; /* Background color */
+  appearance: none; /* Remove default arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="%23333"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-position: right 10px center; /* Position the arrow */
+  background-size: 12px; /* Size of the arrow */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease-in-out; /* Smooth transition for border and background color */
+}
+
+/* Hover effect */
+select:hover {
+  border-color: #007bff; /* Change border color on hover */
+  background-color: #e1f1ff; /* Light background color on hover */
+}
+
+select:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+select option {
+  padding: 10px; /* Padding for options */
+}

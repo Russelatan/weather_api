@@ -1,0 +1,31 @@
+.morning {
+  background-image: url('/assets/morning.jpg');
+}
+
+.noon {
+  background-image: url('/assets/noon.jpg');
+}
+
+.afternoon {
+  background-image: url('/assets/afternoon.jpg');
+}
+
+.night {
+  background-image: url('/assets/night.jpg');
+}
+
+.midnight {
+  background-image: url('/assets/midnight.jpg');
+}
+
+.cloudy_morning {
+  background-image: url('/assets/cloudy.jpg');
+}
+
+.cloudy_afternoon {
+  background-image: url('/assets/cloudy_afternoon.jpg');
+}
+
+.rainy {
+  background-image: url('/assets/rainy.jpg');
+}

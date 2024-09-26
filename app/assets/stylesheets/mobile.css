@@ -1,0 +1,410 @@
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 600px;
+    overflow: hidden!important;
+  }
+
+  body > video {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    z-index: -999;
+  }
+
+  header {
+    height: auto;
+  }
+
+  main {
+    display: flex!important;
+    flex-direction: column;
+    justify-content: space-evenly!important;
+    align-items: center!important;
+    height: 60vh!important;
+    width: 100vw;
+    
+  }
+
+  footer {
+    height: auto;
+  }
+
+  .api_div {
+    min-width: 80%;
+    max-width: 80%;
+    width: auto;
+    min-height: 45%;
+    max-height: 45%;
+    height: auto;
+    background-color: rgba(47, 47, 47, 0.478);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .api_div > div:first-of-type > * {
+    font-size: 2rem;
+  }
+
+  .api_div > div:nth-of-type(2) > * {
+    font-size: 1.5rem;
+  }
+
+  .weather_info {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly!important;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(47, 47, 47, 0.478);
+    min-width: 80vw!important;
+    max-width: 80vw!important;
+    width: auto;
+    min-height: 30vh!important;
+    max-height: 30vh!important;
+    height: auto;
+    border-radius: 30px ;
+    gap: 10px!important;
+  }
+
+  .flip-container {
+    perspective: 1000px; /* Add perspective */
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(169, 168, 168, 0.232);
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    font-size: 0.5rem;
+
+    
+  
+    min-width: 20vw!important;
+    max-width: 20vw!important;
+    width: auto;
+  
+    min-height: 10vh!important;
+    max-height: 10vh!important;
+    height: auto;
+    border-radius: 25px;
+    
+    
+  }
+  
+  .flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s; /* Smooth transition */
+    transform-style: preserve-3d; /* Preserve 3D space */
+  }
+  
+  .front, .back {
+    position: absolute;
+    
+    backface-visibility: hidden; /* Hide the back face */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+    color: white;
+  }
+  
+  .front {
+    background-color: #007bff; /* Front side color */
+    background-size: 20px 20px!important;
+  }
+
+  .front img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+  }
+  
+  .back {
+    background-color: #dc3545; /* Back side color */
+    transform: rotateY(180deg); /* Rotate back side */
+  }
+  
+  .time {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+  }
+  
+  
+  /* app/assets/stylesheets/weather.css */
+  .select-container {
+    margin: 20px 0; /* Add some margin */
+    display: flex;
+    flex-direction: column; /* Stack label and select vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  label {
+    font-size: 16px; /* Font size for the label */
+    margin-bottom: 8px; /* Space between label and select */
+    color: #333; /* Label color */
+  }
+
+  select {
+    padding: 0.2% 30px; /* Padding inside the select */
+    font-size: 16px; /* Font size for the select */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="%23333"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 12px; /* Size of the arrow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for border and background color */
+  }
+
+  /* Hover effect */
+  select:hover {
+    border-color: #007bff; /* Change border color on hover */
+    background-color: #e1f1ff; /* Light background color on hover */
+  }
+
+  select:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+
+  select option {
+    padding: 10px; /* Padding for options */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden!important;
+  }
+
+  body > video {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    z-index: -999;
+  }
+
+  header {
+    height: auto;
+  }
+
+  main {
+    display: flex!important;
+    flex-direction: column;
+    justify-content: space-evenly!important;
+    align-items: center!important;
+    height: 60vh!important;
+    width: 100vw;
+    
+  }
+
+  footer {
+    height: auto;
+  }
+
+  .api_div {
+    min-width: 80%;
+    max-width: 80%;
+    width: auto;
+    min-height: 45%;
+    max-height: 45%;
+    height: auto;
+    background-color: rgba(47, 47, 47, 0.478);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .api_div > div:first-of-type > * {
+    font-size: 2rem;
+  }
+
+  .api_div > div:nth-of-type(2) > * {
+    font-size: 1.5rem;
+  }
+
+  .weather_info {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly!important;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(47, 47, 47, 0.478);
+    min-width: 80vw!important;
+    max-width: 80vw!important;
+    width: auto;
+    min-height: 30vh!important;
+    max-height: 30vh!important;
+    height: auto;
+    border-radius: 30px ;
+    gap: 10px!important;
+  }
+
+  .flip-container {
+    perspective: 1000px; /* Add perspective */
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(169, 168, 168, 0.232);
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    font-size: 0.5rem;
+
+    
+  
+    min-width: 20vw!important;
+    max-width: 20vw!important;
+    width: auto;
+  
+    min-height: 10vh!important;
+    max-height: 10vh!important;
+    height: auto;
+    border-radius: 25px;
+    
+    
+  }
+  
+  .flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s; /* Smooth transition */
+    transform-style: preserve-3d; /* Preserve 3D space */
+  }
+  
+  .front, .back {
+    position: absolute;
+    
+    backface-visibility: hidden; /* Hide the back face */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+    color: white;
+  }
+  
+  .front {
+    background-color: #007bff; /* Front side color */
+    background-size: 20px 20px!important;
+  }
+
+  .front img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+  }
+  
+  .back {
+    background-color: #dc3545; /* Back side color */
+    transform: rotateY(180deg); /* Rotate back side */
+  }
+  
+  .time {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+  }
+
+  /* app/assets/stylesheets/weather.css */
+  .select-container {
+    margin: 20px 0; /* Add some margin */
+    display: flex;
+    flex-direction: column; /* Stack label and select vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  label {
+    font-size: 16px; /* Font size for the label */
+    margin-bottom: 8px; /* Space between label and select */
+    color: #333; /* Label color */
+  }
+
+  select {
+    padding: 0.2% 30px; /* Padding inside the select */
+    font-size: 16px; /* Font size for the select */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="%23333"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 12px; /* Size of the arrow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for border and background color */
+  }
+
+  /* Hover effect */
+  select:hover {
+    border-color: #007bff; /* Change border color on hover */
+    background-color: #e1f1ff; /* Light background color on hover */
+  }
+
+  select:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+
+  select option {
+    padding: 10px; /* Padding for options */
+  }
+}

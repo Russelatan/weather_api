@@ -1,0 +1,34 @@
+<main data-controller="weather">
+  <div id="search_div" class="search_div hidden" data-search-target="search">
+    <div class="InputContainer">
+      <input placeholder="Search.." id="input" class="input" name="text" type="text"  data-weather-target="search_value">
+      
+    </div>
+    <button data-action="click->weather#fetchWeatherData2">
+      Search
+    </button>
+  </div>
+  <div class="api_div" data-weather-target="main">
+    <div class="select_city">
+      <h1>
+        Select City
+      </h1>
+    </div>
+    <div class="buttons">
+      <div class="select-container">
+        <select id="select" data-weather-target="city_select" data-action="change->weather#fetchWeatherData">
+          <option value="" selected disabled></option>
+          <option value="tacloban,PH">Tacloban</option>
+          <option value="kananga,PH">Kananga</option>
+          <option value="ormoc,PH">Ormoc</option>
+          <option value="baybay,PH">Baybay</option>
+          <option value="albuera,PH">Albuera</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+  <div class="weather_info" data-weather-target="display_weather">
+
+  </div>
+</main>
